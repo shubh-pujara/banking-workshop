@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Custom Font Family -->
+    <style>
+      body {
+        font-family: "Open Sans", Calibri, Helvetica, sans-serif;
+      }
+    </style>
+    <title>Banking Workshop 3.0 — Register</title>
+  </head>
+
+  <body class="bg-white text-gray-300">
+<header class="body-font bg-black">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+
+    <!-- Deloitte SVG Logo -->
+    <a class="flex items-center mb-4 md:mb-0" href="#">
+      <img src="deloitte.svg" alt="Deloitte Logo" class="w-28 h-auto" />
+    </a>
+
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <span class="text-white text-lg">Digital Trust & Privacy</span>
+    </nav>
+
+  </div>
+</header>
+
+<section class="body-font bg-black text-white">
+  <div class="container mx-auto flex px-5 py-20 md:flex-row flex-col items-start gap-12">
+
+    <!-- LEFT SIDE: CLEAN, FORMAL EVENT SUMMARY -->
+    <div class="md:w-1/2 w-full leading-relaxed">
+
+      <p class="text-sm opacity-80 mb-4">
+        India | November 2025
+      </p>
+
+      <h1 class="text-3xl font-semibold mb-4">
+        India’s DPDP Rules 2025: Leading digital privacy compliance
+      </h1>
+
+      <p class="mb-6">
+        Exclusive invite-only roundtable for Banking and Financial Services  
+        <br>#DeloitteIndiaDPOForum · Mumbai
+      </p>
+
+      <p class="mb-6">
+        Deloitte India invites you to “DPO Forum – Banking Workshop 3.0,”  
+        a focused session designed to help organisations navigate DPDPA 2023  
+        and DPDP Rules 2025 with practical implementation insights.
+      </p>
+
+      <h2 class="text-xl font-semibold mb-3">Agenda highlights</h2>
+      <ul class="list-disc ml-5 space-y-2 mb-6">
+        <li>Opening keynote – Strategic perspectives from Deloitte</li>
+        <li>Industry impact – Time to increase the treadmill speed</li>
+        <li>Implementation roadmap – What changes now?</li>
+        <li>Fireside chat – Industry leaders</li>
+      </ul>
+
+      <p class="mb-6">
+        <strong>Date:</strong> Wednesday, 26 November 2025<br>
+        <strong>Time:</strong> 3:00 p.m. – 5:00 p.m. IST (followed by Hi-Tea)<br>
+        <strong>Venue:</strong> Deloitte Knowledge Center, Parel, Mumbai
+      </p>
+
+      <p class="text-xs opacity-60">
+        © 2025 Deloitte Touche Tohmatsu India LLP. This invitation is private and non-transferable.
+      </p>
+
+    </div>
+
+<!-- RIGHT SIDE: EMAIL-ONLY REGISTRATION -->
+<div class="md:w-1/2 w-full lg:pl-12">
+  <h2 class="text-2xl font-medium mb-6">Register your interest</h2>
+
+  <p class="opacity-80 mb-6">
+    Kindly provide the email address to which this invitation was sent.
+  </p>
+
+  <!-- EMAIL -->
+  <label class="text-sm opacity-80">Email Address</label>
+  <input id="email" name="email" type="email"
+         class="w-full mb-5 bg-gray-800 rounded border border-gray-600 
+                text-white py-2 px-3 outline-none focus:ring-2 
+                focus:ring-green-500 focus:border-green-500"
+         placeholder="name@company.com">
+
+  <!-- BUTTON -->
+      <div class="flex items-center gap-4">
+        <button id="submitBtn" class="inline-flex bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded text-lg">
+          Confirm Registration
+        </button>
+        <p id="error" class="text-sm text-red-400 hidden">Please enter a valid email address.</p>
+      </div>
+
+
+  <p class="text-xs opacity-70 mt-4">
+    This is an invite-only event. You will receive a confirmation email upon approval.
+  </p>
+</div>
+
+
+  </div>
+</section>
+
+<footer class="bg-white px-6 py-10" style="font-family: Arial, sans-serif;">
+  <div class="w-full flex flex-col md:flex-row justify-between items-start gap-8">
+
+    <!-- LEFT: Deloitte Logo + Label -->
+    <div class="flex-shrink-0">
+      <img src="Deloitte_Black.png" alt="Deloitte Logo" class="w-32 h-auto mb-2" />
+      <p class="text-[#333] text-sm font-semibold" style = "font-family: Open Sans, Calibri, Helvetica, sans-serif;">Digital Privacy and Trust</p>
+    </div>
+
+    <!-- RIGHT: Centered + Justified Text -->
+    <div class="text-[#333] text-[12px] leading-relaxed max-w-xl mx-auto md:mx-0 text-justify">
+
+      <p class="mb-4 text-center">
+        © 2025 Deloitte Touche Tohmatsu India LLP. See Terms of Use for more information.
+      </p>
+
+      <p class="mb-4">
+        Deloitte Touche Tohmatsu India Private Limited (U74140MH199 5PTC093339) a private
+        company limited by shares was converted into Deloitte Touche Tohmatsu India LLP, a
+        limited liability partnership (LLP Identification No. AAE-8458) with effect from October 1, 2015.
+      </p>
+
+      <p>
+        Deloitte refers to one or more of Deloitte Touche Tohmatsu Limited, a UK private company
+        limited by guarantee (“DTTL”), its network of member firms, and their related entities.
+        DTTL and each of its member firms are legally separate and independent entities.  
+        DTTL (also referred to as “Deloitte Global”) does not provide services to clients.
+        Please see www.deloitte.com/about to learn more about our global network of member firms.
+      </p>
+
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+<script>
+  // Defensive: ensure elements exist before attaching listeners
+  const submitBtn = document.getElementById('submitBtn');
+  const emailEl = document.getElementById('email');
+  const errorEl = document.getElementById('error');
+
+  if (submitBtn && emailEl && errorEl) {
+    submitBtn.addEventListener('click', function () {
+      const email = (emailEl.value || '').trim();
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!re.test(email)) {
+        errorEl.classList.remove('hidden');
+        emailEl.classList.add('ring-2','ring-red-500');
+        return;
+      }
+
+      errorEl.classList.add('hidden');
+      emailEl.classList.remove('ring-2','ring-red-500');
+
+      // Redirect to submit.html with encoded email
+      window.location.href = 'submit.html?email=' + encodeURIComponent(email);
+    });
+
+    // Enter key support
+    emailEl.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') submitBtn.click();
+    });
+  } else {
+    // If DOM didn't have expected elements (shouldn't usually happen)
+    console.warn('Registration script: missing expected DOM elements.');
+  }
+</script>
+
+  </body>
+</html>
